@@ -15,8 +15,11 @@ $(function() {
             html += "<li><img src='"+data[i].url+"'/></li>";
         }
         $(".slides").append(html);
-    			$('.flexslider').flexslider();
-
+        
+    			$('.flexslider').flexslider({
+				  animation: "slide",
+				  controlsContainer: ".flex-container"
+			  });
     });
     
 });
