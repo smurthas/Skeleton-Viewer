@@ -1,6 +1,6 @@
 {
-    "title": "Simple Viewer",
-    "desc": "One line description of your viewer",
-    "viewer": "photos",
-    "static":"true"
+    "title": "Prolific Posters",
+    "desc": "Which of your friends cross your streams?",
+    "viewer": "people",
+    "static": "true"
 }
