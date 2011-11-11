@@ -12,9 +12,12 @@ $(function() {
         var html = "";
         for(var i in data)
         {
-            html += "<img src='"+data[i].url+"' width='200' /> ";
+            html += "<li><img src='"+data[i].url+"'/></li>";
         }
-        $("#test").html(html);
+        $(".slides").append(html);
+    			$('.flexslider').flexslider();
+
     });
+    
 });
 
