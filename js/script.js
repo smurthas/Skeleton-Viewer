@@ -7,16 +7,27 @@ $(document).ready(function() {
 Prolific = (function() {
   var container;
   var PAGE_SIZE = 100;
+  var MAX_PAGES = 10;
 
   function init() {
     container = $('#prolific');
     loadLinks(1);
   }
 
-  function loadLinks() {
+  var loadTimeout;
+  function loadLinks(page) {
+    var offset = (page - 1) * PAGE_SIZE;
     $.getJSON(baseUrl + '/Me/links/',
-      {'limit' : PAGE_SIZE, 'full' : true},
-      buildLinks
+      {'limit' : PAGE_SIZE, 'offset' : offset, 'full' : true},
+      function(data) {
+        buildLinks(data);
+        if (page < MAX_PAGES) {
+          loadTimeout = setTimeout(function() {
+            clearTimeout(loadTimeout);
+            loadLinks(page + 1);
+          }, 1000);
+        }
+      }
     );
   }
 
