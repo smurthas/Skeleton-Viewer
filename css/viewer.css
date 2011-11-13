@@ -11,6 +11,21 @@ a {
 a:hover {
   color: #333;
 }
+.header {
+  width: 920px;
+}
+.header p {
+  float: right;
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
+  font-size: 24px;
+  color: #666;
+}
+.header p .total {
+  width: auto;
+  display: inline-block;
+  color: #333;
+  font-weight: bold;
+}
 h1 {
   font-family: 'Quicksand' 'Helvetica' sans-serif;
   font-size: 24px;

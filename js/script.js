@@ -36,9 +36,15 @@ Prolific = (function() {
     for(var i in data) {
       var datum = data[i];
       var people = findOrCreatePeople(datum);
-      $.each(people, function(i, person) {addLink(person, datum)})
+      $.each(people, function(i, person) {addLink(person, datum)});
     }
+    updateTotal(data.length);
     sort();
+  }
+
+  function updateTotal(count) {
+    var total = $('.header .total');
+    total.text(parseInt(total.text(), 10) + count);
   }
 
   function addLink(person, datum) {
