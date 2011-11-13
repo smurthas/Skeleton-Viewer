@@ -66,7 +66,7 @@ Prolific = (function() {
   function addLink(person, datum) {
     $('ul', person).append(
       $('<li>').append(
-        $('<a>', { 'href' : datum.link}).text(datum.title)
+        $('<a>', { 'href' : datum.link}).html(datum.title)
       )
     );
     var count = parseInt(person.attr('data-count'), 10) + 1;
