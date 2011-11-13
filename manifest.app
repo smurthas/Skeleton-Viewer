@@ -1,6 +1,6 @@
 {
     "title": "Prolific Posters",
-    "desc": "Which of your friends cross your streams?",
+    "desc": "Which friends cross your streams?",
     "viewer": "contacts",
     "static": "true"
 }
