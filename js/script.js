@@ -63,14 +63,17 @@ Prolific = (function() {
       person = $('<div>', {
         'id' : slug,
         'data-id' : slug,
-        'class' : 'person',
+        'class' : 'person clearfix',
         'data-count' : 0
       }).append(
-        $('<h3>').append(
-          $('<span>', { 'class' : 'count' }).text(0),
-          encounter.from
+        $('<div>', { 'class' : 'info' }).append(
+          $('<h3>').text(encounter.from),
+          $('<p>').append(
+            $('<span>', { 'class' : 'count' }).text(0),
+            ' links'
+          )
         ),
-        $('<ul>')
+        $('<ul>', { 'class' : 'links' })
       );
       container.append(person);
     }

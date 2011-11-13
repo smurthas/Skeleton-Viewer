@@ -1,17 +1,45 @@
 body {
   padding: 20px;
   font: normal 14px 'Helvetica', sans-serif;
+  background-color: #E3E3E3;
+  color: #333;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
   color: #333;
 }
 h1 {
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
   font-size: 24px;
 }
 h2 {
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
   color: #666;
+  font-weight: normal;
+}
+.prolific {
+  margin-top: 30px;
 }
 .person {
-  padding: 20px 0;
-  border-bottom: 1px solid #999;
+  width: 880px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #FFF;
+}
+.person .info {
+  float: left;
+  width: 150px;
+  margin-right: 20px;
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
+  font-size: 20px;
+}
+.person .info .count {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
 }
 .person h3 {
   font-size: 18px;
@@ -20,9 +48,17 @@ h2 {
 .person h3 span {
   display: inline-block;
   width: 50px;
-  padding-right: 10px;
   text-align: right;
 }
-.person ul {
-  padding-left: 60px;
+.person .links {
+  float: left;
+  width: 710px;
+  height: 145px;
+  overflow-y: scroll;
+}
+.person .links li {
+  padding-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
