@@ -72,6 +72,9 @@ Prolific = (function() {
     var count = parseInt(person.attr('data-count'), 10) + 1;
     person.attr('data-count', count);
     $('.count', person).text(count);
+    if (count > 4) {
+      person.addClass('scrollable');
+    }
   }
 
   function findOrCreatePeople(datum) {
@@ -95,7 +98,8 @@ Prolific = (function() {
             ' links'
           )
         ),
-        $('<ul>', { 'class' : 'links' })
+        $('<ul>', { 'class' : 'links' }),
+        $('<span>', { 'class' : 'scroll' }).html("Scroll &darr;")
       );
       container.append(person);
     }

@@ -48,6 +48,7 @@ h2 {
 }
 .person {
   width: 880px;
+  position: relative;
   margin-bottom: 20px;
   padding: 20px;
   background-color: #FFF;
@@ -76,12 +77,26 @@ h2 {
 .person .links {
   float: left;
   width: 710px;
-  height: 145px;
-  overflow-y: scroll;
+  height: 72px;
+  overflow-y: auto;
 }
 .person .links li {
   padding-bottom: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.person .scroll {
+  display: none;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: #CCC;
+  font-size: 10px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.person.scrollable:hover .scroll {
+  display: block;
 }
