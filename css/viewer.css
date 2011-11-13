@@ -9,7 +9,10 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #333;
+  color: #6EAEBD;
+  -moz-transition: color .2s ease-in-out;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 .header {
   width: 920px;
@@ -87,16 +90,20 @@ h2 {
   white-space: nowrap;
 }
 .person .scroll {
-  display: none;
   position: absolute;
   right: 20px;
   bottom: 10px;
   color: #CCC;
-  font-size: 10px;
+  font-size: 11px;
+  opacity: 0;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 .person.scrollable:hover .scroll {
   display: block;
+  opacity: 1;
+  -moz-transition: opacity .3s ease-in-out .25s;
+  -webkit-transition: opacity .3s ease-in-out .25s;
+  transition: opacity .3s ease-in-out .25s;
 }
