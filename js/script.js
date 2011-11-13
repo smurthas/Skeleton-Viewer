@@ -7,28 +7,44 @@ $(document).ready(function() {
 Prolific = (function() {
   var container;
   var PAGE_SIZE = 100;
-  var MAX_PAGES = 10;
+  var loading = true;
 
   function init() {
     container = $('#prolific');
+    $('.header .stop').click(stopLoading);
     loadLinks(1);
   }
 
   var loadTimeout;
   function loadLinks(page) {
+    if (!loading) {
+      $('.header .stop').replaceWith(
+        $('<span>', { 'class' : 'stop' }).
+          css({ 'display' : 'none' }).
+          text('Finished.').fadeIn()
+      );
+      return;
+    }
+
     var offset = (page - 1) * PAGE_SIZE;
     $.getJSON(baseUrl + '/Me/links/',
       {'limit' : PAGE_SIZE, 'offset' : offset, 'full' : true},
       function(data) {
         buildLinks(data);
-        if (page < MAX_PAGES) {
-          loadTimeout = setTimeout(function() {
-            clearTimeout(loadTimeout);
-            loadLinks(page + 1);
-          }, 1000);
-        }
+        if (data.length < PAGE_SIZE) { loading = false; }
+        loadTimeout = setTimeout(function() {
+          clearTimeout(loadTimeout);
+          loadLinks(page + 1);
+        }, 1000);
       }
     );
+  }
+
+  function stopLoading(evt) {
+    evt.preventDefault();
+    loading = false;
+    $('.header .stop').fadeOut();
+    return false;
   }
 
   function buildLinks(data) {

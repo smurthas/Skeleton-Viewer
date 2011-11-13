@@ -19,12 +19,20 @@ a:hover {
   font-family: 'Quicksand' 'Helvetica' sans-serif;
   font-size: 24px;
   color: #666;
+  text-align: right;
 }
 .header p .total {
   width: auto;
   display: inline-block;
   color: #333;
   font-weight: bold;
+}
+.header p .stop {
+  display: block;
+  font-size: 14px;
+}
+.header p a.stop:hover {
+  color: #D00;
 }
 h1 {
   font-family: 'Quicksand' 'Helvetica' sans-serif;
