@@ -1,0 +1,109 @@
+body {
+  padding: 20px;
+  font: normal 14px 'Helvetica', sans-serif;
+  background-color: #E3E3E3;
+  color: #333;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  color: #6EAEBD;
+  -moz-transition: color .2s ease-in-out;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+.header {
+  width: 920px;
+}
+.header p {
+  float: right;
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
+  font-size: 24px;
+  color: #666;
+  text-align: right;
+}
+.header p .total {
+  width: auto;
+  display: inline-block;
+  color: #333;
+  font-weight: bold;
+}
+.header p .stop {
+  display: block;
+  font-size: 14px;
+}
+.header p a.stop:hover {
+  color: #D00;
+}
+h1 {
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
+  font-size: 24px;
+}
+h2 {
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
+  color: #666;
+  font-weight: normal;
+}
+.prolific {
+  margin-top: 30px;
+}
+.person {
+  width: 880px;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #FFF;
+}
+.person .info {
+  float: left;
+  width: 150px;
+  margin-right: 20px;
+  font-family: 'Quicksand' 'Helvetica' sans-serif;
+  font-size: 20px;
+}
+.person .info .count {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+.person h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+.person h3 span {
+  display: inline-block;
+  width: 50px;
+  text-align: right;
+}
+.person .links {
+  float: left;
+  width: 710px;
+  height: 72px;
+  overflow-y: auto;
+}
+.person .links li {
+  padding-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.person .scroll {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: #CCC;
+  font-size: 11px;
+  opacity: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.person.scrollable:hover .scroll {
+  display: block;
+  opacity: 1;
+  -moz-transition: opacity .3s ease-in-out .25s;
+  -webkit-transition: opacity .3s ease-in-out .25s;
+  transition: opacity .3s ease-in-out .25s;
+}
