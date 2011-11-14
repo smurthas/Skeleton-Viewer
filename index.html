@@ -1,25 +1,55 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html>
 <head>
+	<meta content="charset=utf-8">
+	<title>Mobile Photo</title>
+	
+	<!-- FlexSlider pieces -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="jquery.flexslider-min.js"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+	<!-- Includes for this demo -->
+	<link rel="stylesheet" href="demo-stuff/demo.css" type="text/css" media="screen" />
+	
+	<!-- Hook up the FlexSlider -->
+	<script type="text/javascript">
+		$(window).load(function() {
+/* 			$('.flexslider').flexslider(); */
+		});
+	</script>
+</head>
+<body>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<br>
+  <div id="test"></div>
+	<div id="container">
 
-  <title>Test Viewer</title>
+	
+		<div class="flex-container">
+			<div class="flexslider">
+		    <ul class="slides">
+
+		    </ul>
+		  </div>
+	 	</div>
+	</div>
+	
+	
+	
+</body>
 
   <style type="text/css">
     @import url("css/reset.css");
-    body { background-color:black; }
+    body { background: url(img/zigzag.png); }
   </style>
 
 </head>
 
-<body>
-  <h1>Test Viewer</h1>
-  <div id="test"></div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
 <script src="js/script.js"></script>
 <script src='js/config.js'></script> <!-- optional, used for file:/// desktop development convenience -->
 <script src='/static/js/viewer.js'></script> <!-- common locker viewer utilities -->
+
 </html>
